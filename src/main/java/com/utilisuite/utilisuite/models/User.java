@@ -1,5 +1,6 @@
-package com.utilisuite.utilisuite;
+package com.utilisuite.utilisuite.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,8 +13,12 @@ public class User {
     private Integer id;
 
     // User data
+    @Column (unique=true)
     private String userName;
+    
+    @Column (unique=true)
     private String email;
+    
     private String password;
     private String firstName;
     private String lastName;

@@ -2,7 +2,7 @@ package com.utilisuite.utilisuite;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.utilisuite.utilisuite.User;
+import com.utilisuite.utilisuite.models.User;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 // CRUD refers Create, Read, Update, Delete
