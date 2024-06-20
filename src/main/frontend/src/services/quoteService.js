@@ -2,9 +2,6 @@ const BASE_URL = 'http://localhost:8080/api/quotes'
 
 // Fetches data for specific user
 const index = async () => {
-    // Defines proper URL for the request
-    const REQ_URL = BASE_URL
-
     try {
         const res = await fetch(BASE_URL)
         const data = await res.json()
