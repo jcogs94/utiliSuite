@@ -1,4 +1,4 @@
-package com.utilisuite.utilisuite;
+package com.utilisuite.utilisuite.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
