@@ -1,11 +1,11 @@
 import PercentageCalculator from './PercentageCalculator/PercentageCalculator'
 import TipCalculator from './TipCalculator/TipCalculator'
-import * as service from '../../services/userService.js'
+import * as service from '../../services/quoteService.js'
 import './UtilitiesCard.css'
 
 const UtilitiesCard = () => {
     const fetchData = async () => {
-        const data = await service.show('52')
+        const data = await service.index()
         console.log(data)
     }
     
