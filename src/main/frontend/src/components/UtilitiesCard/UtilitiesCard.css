@@ -12,11 +12,12 @@
 
 #utils-container {
     width: 100%;
+    padding: 20px;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: center;
     gap: 15px;
 
