@@ -64,14 +64,22 @@ const TipCalculator = () => {
         <div id='tip-calculator'>
             <h3>Tip Calculator</h3>
             <div>
-                <label htmlFor="sub-total">Subtotal: $</label>
-                <input name='sub-total' type="number" value={nums.subTotal} step="0.01" min="0"
-                    onChange={(e) => { e.target.value !== '' ? handleChange(e) : setNums({ ...nums, subTotal: '' }) }} />
+                <label htmlFor="sub-total-container">Subtotal:</label>
+                <div name="sub-total-container">
+                    <label htmlFor="sub-total"><b>$</b></label>
+                    <input name='sub-total' type="number" value={nums.subTotal} step="0.01" min="0"
+                        onChange={(e) => { e.target.value !== '' ? handleChange(e) : setNums({ ...nums, subTotal: '' }) }} />
+                    <div className="adjustment"></div>
+                </div>
             </div>
             <div>
-                <label htmlFor="tip-percentage">Tip Percentage: %</label>
-                <input name='tip-percentage' type="number" value={nums.tipPercentage} min="0"
-                    onChange={(e) => { e.target.value !== '' ? handleChange(e) : setNums({ ...nums, tipPercentage: '' }) }} />
+                <label htmlFor="tip-percentage-container">Tip Percentage:</label>
+                <div name="tip-percentage-container">
+                <div className="adjustment"></div>
+                    <input name='tip-percentage' type="number" value={nums.tipPercentage} min="0"
+                        onChange={(e) => { e.target.value !== '' ? handleChange(e) : setNums({ ...nums, tipPercentage: '' }) }} />
+                    <label htmlFor="tip-percentage"><b>%</b></label>
+                </div>
             </div>
             <div>
                 <label htmlFor="round-up">Round up to nearest dollar?</label>

@@ -5,14 +5,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 
-    background-color: cadetblue;
+    border: 2px solid var(--borders);
+    background-color: var(--content-background);
+
+    .adjustment {
+        height: 1px;
+        width: 14px;
+    }
 
     > h3 {
         padding: 10px 0;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--borders);
+        background-color: var(--highlight-background);
+        color: var(--content-background);
         width: 100%;
         text-align: center;
+    }
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        > div {
+            display: flex;
+            gap: 5px;
+
+            > input[type=number] {
+                width: 150px;
+            }
+        }
+    }
+
+    > * {
+        color: var(--text);
     }
 }
 
@@ -25,6 +54,7 @@
     margin-top: auto;
     padding: 10px 20px;
 
-    border-top: 2px solid black;
-    background-color: antiquewhite;
+    color: var(--content-background);
+    border-top: 2px solid var(--borders);
+    background-color: var(--highlight-background);
 }

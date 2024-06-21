@@ -1,4 +1,9 @@
 #root {
+  --dark: #373A40;
+  --lighter: #686D76;
+  --lightest: #EEEEEE;
+  --highlight: #DC5F00;
+
   min-width: 100vw;
   min-height: 100vh;
   
@@ -6,8 +11,11 @@
   flex-direction: column;
   align-items: center;
   justify-items: flex-start;
+
+  background-color: var(--dark);
 }
 
 #testing-header {
   padding: 40px 0;
+  color: var(--lightest);
 }

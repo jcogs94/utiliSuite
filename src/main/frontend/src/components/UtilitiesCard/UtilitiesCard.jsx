@@ -6,7 +6,7 @@ import './UtilitiesCard.css'
 const UtilitiesCard = () => {
     return <>
         <div id='utils-card'>
-            <h3>Utils Testing...</h3>
+            <h2>Utilities</h2>
             <div id="utils-container">
                 <TipCalculator />
                 <PercentageCalculator />

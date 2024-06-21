@@ -7,11 +7,14 @@
     align-items: center;
     gap: 5px;
 
-    background-color: cadetblue;
+    border: 2px solid var(--borders);
+    background-color: var(--content-background);
 
     > h3 {
-        padding: 10px 0;
-        border-bottom: 2px solid black;
+        padding: 12px 0;
+        background-color: var(--highlight-background);
+        border-bottom: 2px solid var(--borders);
+        color: var(--content-background);
         width: 100%;
         text-align: center;
     }
@@ -23,15 +26,18 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
+        color: var(--text);
     }
 }
 
 #percentage-results {
     width: 100%;
     margin-top: auto;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: center;
 
-    border-top: 2px solid black;
-    background-color: antiquewhite;
+    color: var(--content-background);
+    border-top: 2px solid var(--borders);
+    background-color: var(--highlight-background);
 }
