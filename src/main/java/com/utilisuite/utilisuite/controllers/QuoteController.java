@@ -26,6 +26,25 @@ public class QuoteController {
     private QuoteRepository quoteRepository;
 
     // GET route for ALL quotes
+    @GetMapping(path="/all-ids")
+    public @ResponseBody int[] getAllIds() {
+        Iterable<Quote> allQuotes = quoteRepository.findAll();
+        int size = 0;
+        for (Quote i : allQuotes) {
+            size += 1;
+        }
+        
+        int[] ids = new int[size];
+        int index = 0;
+        for (Quote entry : allQuotes) {
+            ids[index] = entry.getId();
+            index++;
+        }
+
+        return ids;
+    }
+
+    // GET route for ALL quotes
     @GetMapping(path="")
     public @ResponseBody Iterable<Quote> getAllQuotes() {
         return quoteRepository.findAll();

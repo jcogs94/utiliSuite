@@ -13,7 +13,7 @@ public class Quote {
     private Integer id;
 
     // Quote data
-    private String whoSaid;
+    private String author;
     
     @Column (unique=true)
     private String quote;
@@ -28,13 +28,13 @@ public class Quote {
     }
 
 
-    // whoSaid getter and setter
-    public String getWhoSaid() {
-        return whoSaid;
+    // author getter and setter
+    public String getAuthor() {
+        return author;
     }
 
-    public void setWhoSaid(String whoSaid) {
-        this.whoSaid = whoSaid;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
 
