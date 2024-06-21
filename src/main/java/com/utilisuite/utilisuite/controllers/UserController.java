@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.utilisuite.utilisuite.models.User;
 import com.utilisuite.utilisuite.repositories.UserRepository;
 
-@Controller // This means that this class is a Controller
-// @CrossOrigin(origins = "http://localhost:8080") // Adds CORS to entire controller
+@Controller
+// @CrossOrigin(origins = "http://localhost:8080") // Adds CORS to entire controller for that url
 @RequestMapping(path="/api/users") // This means URL's start with /demo (after Application path)
 public class UserController {
     @Autowired // This means to get the bean called userRepository
@@ -31,7 +31,7 @@ public class UserController {
     }
 
     // CREATE route for new user
-    @PostMapping(path="") // Map ONLY POST Requests
+    @PostMapping(path="")
     public @ResponseBody String addNewUser (@RequestBody User reqUser) {
         // Creates new User
         User nUser = new User();
