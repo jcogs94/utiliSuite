@@ -3,19 +3,20 @@ import * as service from '../../../services/quoteService.js'
 import './QuoteGenerator.css'
 
 const QuoteGenerator = () => {
+    // useState for displayed quote
     const [currentQuote, setCurrentQuote] = useState({
         id: 0,
         author: '',
         quote: ''
     })
     
+    // function obtains new random quote and sets it as currentQuote
     const getQuote = async () => {
-        // const data = await service.index()
-        // const data = await service.allIds()
         const data = await service.fetchQuote()
         setCurrentQuote(data)
     }
 
+    // On load, fetches a new random quote
     useEffect(() => {
         getQuote()
     },[])
