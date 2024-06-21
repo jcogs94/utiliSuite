@@ -1,7 +1,7 @@
 const rn = require('random-number')
 
-// const BASE_URL = 'http://localhost:8080/api/quotes'
-const BASE_URL = 'http://18.224.41.247:8080/api/quotes'
+const BASE_URL = 'http://localhost:8080/api/quotes'
+// const BASE_URL = 'http://18.224.41.247:8080/api/quotes'
 
 // Fetches all quotes
 const index = async () => {
