@@ -18,7 +18,7 @@ import com.utilisuite.utilisuite.models.Quote;
 import com.utilisuite.utilisuite.repositories.QuoteRepository;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:3000") // Adds CORS to entire controller for the specified url
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8080", "http://18.224.41.247:8080"}) // Adds CORS to entire controller for the specified url
 @RequestMapping(path="/api/quotes")
 public class QuoteController {
     @Autowired // This means to get the bean called userRepository
