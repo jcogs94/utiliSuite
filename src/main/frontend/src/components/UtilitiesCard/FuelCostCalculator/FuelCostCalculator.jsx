@@ -3,6 +3,7 @@ import randomNumber from 'random-number'
 import './FuelCostCalculator.css'
 
 const FuelCostCalculator = () => {
+    // useState for all necessary nums in calc
     const [nums, setNums] = useState({
         distance: 1,
         mpg: 1,
@@ -10,9 +11,12 @@ const FuelCostCalculator = () => {
         result: 0
     })
     
+    // handler updates values based on user input and makes current calculation
     const handleInput = (event) => {
         let newNums = {...nums}
         
+        // switch sorts out the value that was changed by the user, if empty, leaves
+        // it as such, else parses int/float
         switch (event.target.name) {
             case 'fcc-distance':
                 if (event.target.value !== '')
@@ -35,11 +39,13 @@ const FuelCostCalculator = () => {
             default: break
         }
 
+        // if none of the necessary values are empty
         if (newNums.distance !== '' && newNums.mpg !== '' && newNums.price !== '') {
+            // makes the calculation and sets the result to the fixed value of x.xx
             let result = ( newNums.distance / newNums.mpg ) * newNums.price
             newNums.result = result.toFixed(2)
         }
-
+        // updates all nums with current values
         setNums(newNums)
     }
 

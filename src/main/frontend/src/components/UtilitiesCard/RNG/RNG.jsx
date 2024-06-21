@@ -3,6 +3,7 @@ import randomNumber from 'random-number'
 import './RNG.css'
 
 const RNG = () => {
+    // useState for necessary nums
     const [nums, setNums] = useState({
         min: 0,
         max: 0,
@@ -10,9 +11,14 @@ const RNG = () => {
         result: 0
     })
     
+    // handler to update nums from user input, calc result,
+    // and update useState
     const handleInput = (event) => {
         let newNums = {...nums}
         
+        // Switch sorts out the values to be updated based on input
+        // if the values are empty, leave it as such, else parses string
+        // to float. Radio buttons "toggle" onlyWhole value
         switch (event.target.name) {
             case 'rng-min':
                 if (event.target.value !== '')
@@ -31,21 +37,26 @@ const RNG = () => {
                 newNums.onlyWhole = !newNums.onlyWhole
                 break
             case 'rng-get-num':
+                // If min and max are not empty
                 if (newNums.min !== '' && newNums.max !== '') {
+                    // and are not the same number
                     if (newNums.min !== newNums.max) {
+                        // uses randomNumber package and creates the
+                        // "generator" with necessary inputs
                         const randGen = randomNumber.generator({
                             min: newNums.min,
                             max: newNums.max,
                             integer: newNums.onlyWhole
                         })
+                        // then sets the result to the generated value using that generator
                         newNums.result = randGen()
                     } else
-                        newNums.result = newNums.min
+                        newNums.result = newNums.min // if the values are the same, sets result to that value
                 }
                 break
             default: break
         }
-
+        // Sets all nums to the new values
         setNums(newNums)
     }
 
