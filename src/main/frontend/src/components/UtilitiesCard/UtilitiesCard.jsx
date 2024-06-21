@@ -1,3 +1,4 @@
+import FuelCostCalculator from './FuelCostCalculator/FuelCostCalculator'
 import PercentageCalculator from './PercentageCalculator/PercentageCalculator'
 import QuoteGenerator from './QuoteGenerator/QuoteGenerator'
 import RNG from './RNG/RNG'
@@ -11,6 +12,7 @@ const UtilitiesCard = () => {
                 <TipCalculator />
                 <PercentageCalculator />
                 <RNG />
+                <FuelCostCalculator />
                 <QuoteGenerator />
             </div>
         </div>
